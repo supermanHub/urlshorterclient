@@ -1,26 +1,20 @@
 # urlshorterclient
 
-## Project setup
-```
-npm install
-```
+A test client for [urlshorter](https://hub.docker.com/r/mengluo668/urlshorter/)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Howto
 
-### Compiles and minifies for production
+1. Clone this project to your local
+2. cd urlshorterclient
+3. change your `/etc/hosts` and append blow to it:
+```js
+127.0.0.1	short.example.com
+127.0.0.1	test.example.com
+127.0.0.1	test1.example.com
+127.0.0.1	test2.example.com
+127.0.0.1	test3.example.com
 ```
-npm run build
-```
+4. execute `docker-compose up -d`
+5. open browser and goto [http://short.example.com/](http://short.example.com/), enjoy it!
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+> For **WINDOWS**, your have to change `${PWD}` to `urlshorterclient` folder manually, and edit `hosts` in windows style!
