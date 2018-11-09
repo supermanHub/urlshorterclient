@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  redis:
+    image: redis:5.0.0
+  urlshorter:
+    image: mengluo668/urlshorter:1.0.1
+    environment:
+      - SU_ERROR_URL=http://www.baidu.com
+  nginx:
+    image: nginx:1.15.5
+    ports:
+      - 80:80
+    volumes:
+      - ${PWD}/dist:/usr/share/nginx/dist
+      - ${PWD}/nginx.conf:/etc/nginx/nginx.conf
+   
