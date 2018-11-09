@@ -5,7 +5,7 @@ services:
   urlshorter:
     image: mengluo668/urlshorter:1.0.1
     environment:
-      - SU_ERROR_URL=http://www.baidu.com
+      - SU_ERROR_URL=http://error.example.com
   nginx:
     image: nginx:1.15.5
     ports:
